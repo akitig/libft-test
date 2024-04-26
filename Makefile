@@ -1,6 +1,7 @@
 LIBFTDIR    = ../libft/
 SRCS        = test_is.c \
-              test.c
+              test.c  	\
+			  utils.c 	\
 
 CC          = cc
 RM          = rm -f
