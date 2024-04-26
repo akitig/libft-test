@@ -6,7 +6,7 @@
 /*   By: akunimot <akunimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 04:41:03 by akunimot          #+#    #+#             */
-/*   Updated: 2024/04/27 04:45:45 by akunimot         ###   ########.fr       */
+/*   Updated: 2024/04/27 04:51:53 by akunimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	print_AC(int WC, char *func);
 int		test_isalpha(int i);
 int		test_isalnum(int i);
 int		test_isascii(int i);
+int		test_isdigit(int i);
+int		test_isprint(int i);
 
 void	test_is(void);
 

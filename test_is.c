@@ -6,7 +6,7 @@
 /*   By: akunimot <akunimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 04:39:52 by akunimot          #+#    #+#             */
-/*   Updated: 2024/04/27 04:44:58 by akunimot         ###   ########.fr       */
+/*   Updated: 2024/04/27 04:49:40 by akunimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,26 @@ int	test_isascii(int i)
 	return (WC_flg);
 }
 
+// int isdigit(int c)
+int	test_isdigit(int i)
+{
+	bool	WC_flg;
+
+	assert(ft_isdigit(i) == isdigit(i));
+	WC_flg = false;
+	return (WC_flg);
+}
+
+// int isprint(int c)
+int	test_isprint(int i)
+{
+	bool	WC_flg;
+
+	assert(ft_isprint(i) == isprint(i));
+	WC_flg = false;
+	return (WC_flg);
+}
+
 void	test_is(void)
 {
 	long long int i;
@@ -49,8 +69,8 @@ void	test_is(void)
 	bool WC_ISALNUM;
 	bool WC_ISASCII;
 
-	//	bool			WC_ISDIGIT;
-	//	bool			WC_ISPRINT;
+	bool WC_ISDIGIT;
+	bool WC_ISPRINT;
 	i = INT_MIN;
 	WC_ISALPHA = false;
 	WC_ISALNUM = false;
@@ -61,9 +81,13 @@ void	test_is(void)
 		WC_ISALPHA = test_isalpha(i);
 		WC_ISALNUM = test_isalnum(i);
 		WC_ISASCII = test_isascii(i);
+		WC_ISDIGIT = test_isdigit(i);
+		WC_ISPRINT = test_isprint(i);
 		i += get_rand(1, 100);
 	}
 	print_AC(WC_ISALPHA, "isalpla");
 	print_AC(WC_ISALNUM, "isalnum");
 	print_AC(WC_ISASCII, "isascii");
+	print_AC(WC_ISDIGIT, "isdigit");
+	print_AC(WC_ISPRINT, "isprint");
 }
